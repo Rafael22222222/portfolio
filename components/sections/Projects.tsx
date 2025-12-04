@@ -26,11 +26,11 @@ const projects = [
     },
     {
         id: 3,
-        title: "Crypto Portfolio",
-        description: "Track your crypto assets with real-time price updates and charts.",
-        tags: ["TypeScript", "Web3", "Chart.js"],
-        image: "/project3.jpg", // Placeholder
-        link: "",
+        title: "Rafael.studio",
+        description: "AI & App Architect portfolio showcasing innovative AI-powered applications and modern web development projects.",
+        tags: ["React", "AI", "Tailwind", "Vite"],
+        image: "/project3.jpg", // Placeholder - add screenshot if available
+        link: "https://rafael-studio.vercel.app/",
         github: "",
     },
 ];

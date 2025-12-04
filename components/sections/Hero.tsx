@@ -23,7 +23,7 @@ export const Hero = () => {
                         I am <span className="text-gradient block md:inline">Rafael Igbo</span>
                     </h1>
                     <p className="text-gray-300 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed mx-auto md:mx-0">
-                        I build modern and simple websites/web apps that are fast, clean, built to scale and solve problems
+                        I build modern and simple websites/web apps that are fast, clean, built to scale and solve problems.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
