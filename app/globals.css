@@ -16,9 +16,53 @@
   --font-heading: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }
 
+/* Light theme (default) */
 :root {
-  --background: #111111;
-  --foreground: #ffffff;
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --glass-bg: rgba(15, 23, 42, 0.03);
+  --glass-border: rgba(15, 23, 42, 0.12);
+  --glass-card-bg: rgba(15, 23, 42, 0.04);
+  --glass-card-border: rgba(15, 23, 42, 0.08);
+  --input-bg: rgba(15, 23, 42, 0.05);
+  --input-border: rgba(15, 23, 42, 0.15);
+  --text-gradient-start: #0f172a;
+  --text-gradient-end: #334155;
+  --tag-bg: rgba(15, 23, 42, 0.08);
+  --tag-text: #334155;
+  --icon-bg: rgba(15, 23, 42, 0.06);
+  --icon-border: rgba(15, 23, 42, 0.12);
+  --timeline-border: rgba(15, 23, 42, 0.15);
+}
+
+/* Dark theme */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #f8fafc;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-card-bg: rgba(255, 255, 255, 0.03);
+  --glass-card-border: rgba(255, 255, 255, 0.08);
+  --input-bg: rgba(0, 0, 0, 0.3);
+  --input-border: rgba(255, 255, 255, 0.1);
+  --text-gradient-start: #ffffff;
+  --text-gradient-end: #94a3b8;
+  --tag-bg: rgba(255, 255, 255, 0.08);
+  --tag-text: #cbd5e1;
+  --icon-bg: rgba(255, 255, 255, 0.05);
+  --icon-border: rgba(255, 255, 255, 0.1);
+  --timeline-border: rgba(255, 255, 255, 0.1);
+}
+
+html {
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -26,28 +70,97 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   overflow-x: hidden;
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Theme-adaptive text utilities */
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
 }
 
 /* Glassmorphism utilities */
 .glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: var(--glass-card-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-card-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
 }
 
 .text-gradient {
-  background: linear-gradient(to right, #ffffff, #94a3b8);
+  background: linear-gradient(135deg, var(--text-gradient-start), var(--text-gradient-end));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+}
+
+/* Theme-adaptive input styles */
+.input-theme {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-primary);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-theme::placeholder {
+  color: var(--text-muted);
+}
+
+.input-theme:focus {
+  border-color: var(--color-accent-mature);
+  box-shadow: 0 0 0 3px rgba(148, 163, 184, 0.2);
+}
+
+/* Theme-adaptive tag styles */
+.tag-theme {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  border: 1px solid transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tag-theme:hover {
+  background: var(--glass-border);
+  color: var(--text-primary);
+}
+
+/* Theme-adaptive icon container */
+.icon-container {
+  background: var(--icon-bg);
+  border: 1px solid var(--icon-border);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-container:hover {
+  background: var(--glass-border);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(148, 163, 184, 0.3);
+}
+
+/* Timeline border */
+.timeline-border {
+  border-color: var(--timeline-border);
 }

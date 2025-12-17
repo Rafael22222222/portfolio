@@ -45,10 +45,10 @@ export const Projects = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
                         Featured <span className="text-gradient">Projects</span>
                     </h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto">
+                    <p className="text-muted max-w-2xl mx-auto">
                         A selection of my recent work, showcasing my skills in frontend development and UI design.
                     </p>
                 </motion.div>
@@ -61,23 +61,23 @@ export const Projects = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             whileHover={{
                                 y: -10,
-                                transition: { duration: 0.3 }
+                                transition: { duration: 0.4, ease: "easeOut" }
                             }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                         >
-                            <GlassCard hoverEffect className="h-full flex flex-col overflow-hidden group hover:shadow-[0_0_40px_rgba(148,163,184,0.3)] transition-all duration-300">
-                                <div className="relative h-48 w-full bg-gray-800 overflow-hidden rounded-t-lg">
+                            <GlassCard hoverEffect className="h-full flex flex-col overflow-hidden group hover:shadow-[0_0_50px_rgba(148,163,184,0.3)] transition-all duration-500">
+                                <div className="relative h-48 w-full bg-secondary/20 overflow-hidden rounded-t-lg">
                                     {project.image && (
                                         <img
                                             src={project.image}
                                             alt={project.title}
-                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                                         />
                                     )}
                                     {!project.image && (
                                         <>
-                                            <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-black" />
+                                            <div className="absolute inset-0 bg-gradient-to-br from-secondary/50 to-primary/50" />
                                             <div className="absolute inset-0 flex items-center justify-center text-4xl opacity-20">
                                                 🚀
                                             </div>
@@ -86,16 +86,16 @@ export const Projects = () => {
                                 </div>
 
                                 <div className="p-4 flex-grow flex flex-col">
-                                    <h3 className="text-xl font-bold mb-2 group-hover:text-gradient transition-all duration-300">
+                                    <h3 className="text-xl font-bold mb-2 text-primary group-hover:text-gradient transition-all duration-500">
                                         {project.title}
                                     </h3>
-                                    <p className="text-gray-400 text-sm mb-4 flex-grow">
+                                    <p className="text-muted text-sm mb-4 flex-grow">
                                         {project.description}
                                     </p>
 
                                     <div className="flex flex-wrap gap-2 mb-6">
                                         {project.tags.map((tag) => (
-                                            <span key={tag} className="text-xs px-2 py-1 rounded bg-white/5 text-gray-300">
+                                            <span key={tag} className="tag-theme text-xs px-2 py-1 rounded">
                                                 {tag}
                                             </span>
                                         ))}
@@ -118,3 +118,4 @@ export const Projects = () => {
         </section>
     );
 };
+

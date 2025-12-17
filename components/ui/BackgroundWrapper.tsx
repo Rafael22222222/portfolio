@@ -2,10 +2,24 @@
 
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
+import { useTheme } from "@/context/ThemeContext";
 
 export const BackgroundWrapper = () => {
     const [vantaEffect, setVantaEffect] = useState<any>(null);
     const vantaRef = useRef<HTMLDivElement>(null);
+    const { theme } = useTheme();
+
+    // Theme colors
+    const themeColors = {
+        dark: {
+            backgroundColor: 0x0a0a0a,
+            color: 0xb026ff, // neon purple
+        },
+        light: {
+            backgroundColor: 0xffffff,
+            color: 0x6366f1, // indigo for light mode
+        },
+    };
 
     useEffect(() => {
         let effect: any = null;
@@ -24,10 +38,10 @@ export const BackgroundWrapper = () => {
                         minWidth: 200.0,
                         scale: 1.0,
                         scaleMobile: 1.0,
-                        color: 0xb026ff,
-                        backgroundColor: 0x111111,
-                        points: 12.0,
-                        maxDistance: 22.0,
+                        color: themeColors[theme].color,
+                        backgroundColor: themeColors[theme].backgroundColor,
+                        points: 10.0,
+                        maxDistance: 20.0,
                         spacing: 18.0,
                         THREE: THREE,
                     });
@@ -44,7 +58,18 @@ export const BackgroundWrapper = () => {
             if (effect) effect.destroy();
             if (vantaEffect) vantaEffect.destroy();
         };
-    }, [vantaEffect]);
+    }, []);
 
-    return <div ref={vantaRef} className="fixed inset-0 -z-10 w-full h-full" />;
+    // Update Vanta colors when theme changes
+    useEffect(() => {
+        if (vantaEffect) {
+            vantaEffect.setOptions({
+                color: themeColors[theme].color,
+                backgroundColor: themeColors[theme].backgroundColor,
+            });
+        }
+    }, [theme, vantaEffect]);
+
+    return <div ref={vantaRef} className="fixed inset-0 -z-10 w-full h-full transition-colors duration-500" />;
 };
+

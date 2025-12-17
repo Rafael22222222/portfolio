@@ -16,13 +16,13 @@ export const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="z-10 text-center md:text-left order-2 md:order-1"
                 >
-                    <h2 className="text-accent-mature tracking-widest text-sm md:text-base mb-4 uppercase font-medium">
+                    <h2 className="text-muted tracking-widest text-sm md:text-base mb-4 uppercase font-medium">
                         Hire Me
                     </h2>
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight leading-tight">
+                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight leading-tight text-primary">
                         I am <span className="text-gradient block md:inline">Rafael Igbo</span>
                     </h1>
-                    <p className="text-gray-300 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed mx-auto md:mx-0">
+                    <p className="text-secondary text-lg md:text-xl max-w-2xl mb-10 leading-relaxed mx-auto md:mx-0">
                         I build modern and simple websites/web apps that are fast, clean, built to scale and solve problems.
                     </p>
 
@@ -48,7 +48,7 @@ export const Hero = () => {
                         <div className="absolute inset-0 bg-gradient-to-tr from-neon-purple to-neon-cyan rounded-2xl blur-3xl opacity-40 animate-pulse" />
 
                         {/* Image Container */}
-                        <div className="relative w-full h-full glass rounded-2xl border border-white/10 overflow-hidden transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                        <div className="relative w-full h-full glass rounded-2xl overflow-hidden transform rotate-3 hover:rotate-0 transition-transform duration-700 ease-out">
                             <div className="absolute inset-0 bg-black/20 z-10" /> {/* Overlay for better text contrast if needed */}
                             <img
                                 src="/hero-image.jpg"
@@ -70,8 +70,9 @@ export const Hero = () => {
                 transition={{ delay: 1.5, duration: 1 }}
                 className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20"
             >
-                <ArrowDown className="text-white/50 w-6 h-6" />
+                <ArrowDown className="text-muted w-6 h-6" />
             </motion.div>
         </section>
     );
 };
+

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +28,7 @@ export const Navbar = () => {
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex items-center space-x-8">
                 {links.map((link) => (
                     <Link
                         key={link.name}
@@ -37,19 +38,23 @@ export const Navbar = () => {
                         {link.name}
                     </Link>
                 ))}
+                <ThemeToggle />
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-                className="md:hidden text-white"
-                onClick={() => setIsOpen(!isOpen)}
-            >
-                <div className="space-y-2">
-                    <span className="block w-8 h-0.5 bg-white"></span>
-                    <span className="block w-8 h-0.5 bg-white"></span>
-                    <span className="block w-8 h-0.5 bg-white"></span>
-                </div>
-            </button>
+            {/* Mobile Menu Button and Theme Toggle */}
+            <div className="flex items-center space-x-4 md:hidden">
+                <ThemeToggle />
+                <button
+                    className="text-current"
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    <div className="space-y-2">
+                        <span className="block w-8 h-0.5 bg-current"></span>
+                        <span className="block w-8 h-0.5 bg-current"></span>
+                        <span className="block w-8 h-0.5 bg-current"></span>
+                    </div>
+                </button>
+            </div>
 
             {/* Mobile Menu Overlay (Simplified) */}
             {isOpen && (
@@ -69,3 +74,4 @@ export const Navbar = () => {
         </motion.nav>
     );
 };
+

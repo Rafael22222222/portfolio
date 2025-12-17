@@ -37,35 +37,35 @@ export const Experience = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
                         Work <span className="text-gradient">Experience</span>
                     </h2>
                 </motion.div>
 
-                <div className="relative border-l-2 border-white/10 ml-4 md:ml-0 space-y-12">
+                <div className="relative timeline-border border-l-2 ml-4 md:ml-0 space-y-12">
                     {experiences.map((exp, index) => (
                         <motion.div
                             key={exp.id}
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.2 }}
+                            transition={{ delay: index * 0.2, duration: 0.5 }}
                             className="relative pl-8 md:pl-12"
                         >
                             {/* Timeline Dot */}
-                            <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neon-purple shadow-[0_0_10px_rgba(176,38,255,0.5)]" />
+                            <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neon-purple shadow-[0_0_15px_rgba(176,38,255,0.6)]" />
 
-                            <GlassCard className="p-6 md:p-8 relative group hover:border-accent-mature/50 hover:shadow-[0_0_40px_rgba(148,163,184,0.4)] hover:scale-[1.02] transition-all duration-300">
+                            <GlassCard className="p-6 md:p-8 relative group hover:shadow-[0_0_50px_rgba(148,163,184,0.4)] hover:scale-[1.02] transition-all duration-500">
                                 <span className="text-sm text-neon-cyan font-mono mb-2 block">
                                     {exp.period}
                                 </span>
-                                <h3 className="text-2xl font-bold text-white mb-1">
+                                <h3 className="text-2xl font-bold text-primary mb-1">
                                     {exp.role}
                                 </h3>
-                                <h4 className="text-lg text-gray-400 mb-4">
+                                <h4 className="text-lg text-muted mb-4">
                                     {exp.company}
                                 </h4>
-                                <p className="text-gray-300 leading-relaxed">
+                                <p className="text-secondary leading-relaxed">
                                     {exp.description}
                                 </p>
                             </GlassCard>
@@ -76,3 +76,4 @@ export const Experience = () => {
         </section>
     );
 };
+

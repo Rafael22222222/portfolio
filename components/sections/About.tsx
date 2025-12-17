@@ -25,15 +25,15 @@ export const About = () => {
                     <motion.div
                         className="relative w-64 h-64 md:w-80 md:h-80 group cursor-pointer"
                         whileHover={{ scale: 1.05, rotate: 2 }}
-                        transition={{ type: "spring", stiffness: 300 }}
+                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
                     >
-                        <div className="absolute inset-0 bg-gradient-to-tr from-neon-purple to-neon-cyan rounded-full blur-2xl opacity-50 animate-pulse group-hover:opacity-70 transition-opacity duration-300" />
-                        <div className="relative w-full h-full glass rounded-full border-2 border-white/20 group-hover:border-white/40 overflow-hidden flex items-center justify-center transition-all duration-300 group-hover:shadow-[0_0_30px_rgba(176,38,255,0.5)]">
+                        <div className="absolute inset-0 bg-gradient-to-tr from-neon-purple to-neon-cyan rounded-full blur-2xl opacity-50 animate-pulse group-hover:opacity-70 transition-opacity duration-500" />
+                        <div className="relative w-full h-full glass rounded-full overflow-hidden flex items-center justify-center transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(176,38,255,0.5)]">
                             <Image
                                 src="/profile-v2.jpg"
                                 alt="Rafael Igbo"
                                 fill
-                                className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                                 priority
                             />
                         </div>
@@ -47,16 +47,16 @@ export const About = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    <GlassCard className="p-8 md:p-12 hover:shadow-[0_0_40px_rgba(148,163,184,0.5)] hover:border-accent-mature/30 transition-all duration-300">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                    <GlassCard className="p-8 md:p-12 hover:shadow-[0_0_50px_rgba(148,163,184,0.4)] transition-all duration-500">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
                             About <span className="text-gradient">Me</span>
                         </h2>
-                        <p className="text-gray-300 mb-6 leading-relaxed">
-                            I’m a full-stack developer who builds fast, clean, and scalable digital products. I specialize in turning ideas into fully functional websites and web apps,UI designs and also stable backend architecture. My focus is on writing reliable code, delivering smooth user experiences, and building products that actually solve problems.
+                        <p className="text-secondary mb-6 leading-relaxed">
+                            I'm a full-stack developer who builds fast, clean, and scalable digital products. I specialize in turning ideas into fully functional websites and web apps,UI designs and also stable backend architecture. My focus is on writing reliable code, delivering smooth user experiences, and building products that actually solve problems.
                         </p>
 
                         <div className="space-y-4">
-                            <h3 className="text-xl font-semibold text-white">Tech Stack</h3>
+                            <h3 className="text-xl font-semibold text-primary">Tech Stack</h3>
                             <div className="flex flex-wrap gap-2">
                                 {skills.map((skill, index) => (
                                     <motion.span
@@ -65,11 +65,10 @@ export const About = () => {
                                         whileInView={{ opacity: 1, scale: 1 }}
                                         whileHover={{
                                             scale: 1.1,
-                                            boxShadow: "0 0 20px rgba(148, 163, 184, 0.4)",
-                                            borderColor: "rgba(148, 163, 184, 0.5)"
+                                            boxShadow: "0 0 25px rgba(148, 163, 184, 0.4)",
                                         }}
-                                        transition={{ delay: index * 0.1 }}
-                                        className="px-3 py-1 rounded-full text-sm bg-white/5 border border-white/10 text-accent-mature hover:bg-white/10 hover:text-white transition-colors cursor-pointer"
+                                        transition={{ delay: index * 0.05, duration: 0.4 }}
+                                        className="tag-theme px-3 py-1 rounded-full text-sm cursor-pointer"
                                     >
                                         {skill}
                                     </motion.span>
@@ -82,3 +81,4 @@ export const About = () => {
         </section >
     );
 };
+
