@@ -33,11 +33,11 @@ export const Contact = () => {
                         transition={{ delay: 0.2, duration: 0.5 }}
                         className="space-y-8"
                     >
-                        <GlassCard className="p-8 h-full flex flex-col justify-center hover:shadow-[0_0_50px_rgba(148,163,184,0.4)] transition-all duration-500">
+                        <GlassCard className="p-8 h-full flex flex-col justify-center hover:shadow-[0_0_50px_rgba(251,191,36,0.2)] transition-all duration-500">
                             <h3 className="text-2xl font-bold mb-6 text-primary">Contact Info</h3>
 
                             <div className="space-y-6">
-                                <a href="mailto:raphaeligbo554@gmail.com" className="flex items-center space-x-4 text-secondary hover:text-neon-cyan transition-colors duration-300">
+                                <a href="mailto:raphaeligbo554@gmail.com" className="flex items-center space-x-4 text-secondary hover:text-gold-light transition-colors duration-300">
                                     <div className="icon-container p-3 rounded-full">
                                         <Mail className="w-6 h-6" />
                                     </div>
@@ -67,7 +67,7 @@ export const Contact = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.4, duration: 0.5 }}
                     >
-                        <GlassCard className="p-8 hover:shadow-[0_0_50px_rgba(148,163,184,0.4)] transition-all duration-500">
+                        <GlassCard className="p-8 hover:shadow-[0_0_50px_rgba(251,191,36,0.2)] transition-all duration-500">
                             <form className="space-y-6">
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-medium text-muted mb-2">Name</label>

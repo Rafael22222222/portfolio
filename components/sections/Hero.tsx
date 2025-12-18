@@ -45,11 +45,11 @@ export const Hero = () => {
                 >
                     <div className="relative w-72 h-72 md:w-[500px] md:h-[600px]">
                         {/* Glow Effect */}
-                        <div className="absolute inset-0 bg-gradient-to-tr from-neon-purple to-neon-cyan rounded-2xl blur-3xl opacity-40 animate-pulse" />
+                        <div className="absolute inset-0 bg-gradient-to-tr from-gold-premium to-gold-light rounded-2xl blur-3xl opacity-30 animate-pulse" />
 
                         {/* Image Container */}
                         <div className="relative w-full h-full glass rounded-2xl overflow-hidden transform rotate-3 hover:rotate-0 transition-transform duration-700 ease-out">
-                            <div className="absolute inset-0 bg-black/20 z-10" /> {/* Overlay for better text contrast if needed */}
+                            <div className="absolute inset-0 bg-black/40 z-10" /> {/* Overlay for better text contrast */}
                             <img
                                 src="/hero-image.jpg"
                                 alt="Rafael Igbo"
@@ -58,8 +58,8 @@ export const Hero = () => {
                         </div>
 
                         {/* Decorative Elements */}
-                        <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-neon-cyan rounded-br-2xl" />
-                        <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-neon-purple rounded-tl-2xl" />
+                        <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-gold-premium rounded-br-2xl" />
+                        <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-gold-dark rounded-tl-2xl" />
                     </div>
                 </motion.div>
             </div>

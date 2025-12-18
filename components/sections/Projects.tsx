@@ -66,7 +66,7 @@ export const Projects = () => {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                         >
-                            <GlassCard hoverEffect className="h-full flex flex-col overflow-hidden group hover:shadow-[0_0_50px_rgba(148,163,184,0.3)] transition-all duration-500">
+                            <GlassCard hoverEffect className="h-full flex flex-col overflow-hidden group hover:shadow-[0_0_50px_rgba(251,191,36,0.2)] transition-all duration-500">
                                 <div className="relative h-48 w-full bg-secondary/20 overflow-hidden rounded-t-lg">
                                     {project.image && (
                                         <img

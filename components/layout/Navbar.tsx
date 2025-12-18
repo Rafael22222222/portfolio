@@ -24,7 +24,7 @@ export const Navbar = () => {
             className="fixed top-0 left-0 right-0 z-40 px-6 py-4 flex justify-between items-center glass border-b-0"
         >
             <Link href="/" className="text-2xl font-bold tracking-tighter">
-                RAFAEL<span className="text-neon-purple">.</span>
+                RAFAEL<span className="text-gold-premium">.</span>
             </Link>
 
             {/* Desktop Menu */}
@@ -33,7 +33,7 @@ export const Navbar = () => {
                     <Link
                         key={link.name}
                         href={link.href}
-                        className="text-sm font-medium hover:text-neon-cyan transition-colors"
+                        className="text-sm font-medium hover:text-gold-premium transition-colors"
                     >
                         {link.name}
                     </Link>
@@ -63,7 +63,7 @@ export const Navbar = () => {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-lg font-medium hover:text-neon-cyan"
+                            className="text-lg font-medium hover:text-gold-premium"
                             onClick={() => setIsOpen(false)}
                         >
                             {link.name}

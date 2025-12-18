@@ -1,63 +1,62 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #111111;
-  --color-secondary: #1E1E1E;
-  --color-neon-purple: #b026ff;
-  --color-neon-cyan: #00f0ff;
-  --color-neon-pink: #ff007f;
+  --color-primary: #000000;
+  --color-secondary: #0a0a0a;
+  --color-gold-light: #fde68a;
+  --color-gold: #fbbf24;
+  --color-gold-dark: #b45309;
+  --color-gold-premium: #d4af37;
 
-  --color-accent-mature: #94a3b8;
-  /* Slate-400 */
-  --color-accent-gold: #e2e8f0;
-  /* Slate-200 */
+  --color-accent-mature: #d4af37;
+  --color-accent-gold: #fde68a;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Light theme (default) */
+/* Light theme (default) - Overridden to stay dark/gold for premium feel */
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --text-primary: #0f172a;
-  --text-secondary: #334155;
-  --text-muted: #64748b;
-  --glass-bg: rgba(15, 23, 42, 0.03);
-  --glass-border: rgba(15, 23, 42, 0.12);
-  --glass-card-bg: rgba(15, 23, 42, 0.04);
-  --glass-card-border: rgba(15, 23, 42, 0.08);
-  --input-bg: rgba(15, 23, 42, 0.05);
-  --input-border: rgba(15, 23, 42, 0.15);
-  --text-gradient-start: #0f172a;
-  --text-gradient-end: #334155;
-  --tag-bg: rgba(15, 23, 42, 0.08);
-  --tag-text: #334155;
-  --icon-bg: rgba(15, 23, 42, 0.06);
-  --icon-border: rgba(15, 23, 42, 0.12);
-  --timeline-border: rgba(15, 23, 42, 0.15);
-}
-
-/* Dark theme */
-.dark {
-  --background: #0a0a0a;
+  --background: #000000;
   --foreground: #f8fafc;
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
   --text-muted: #94a3b8;
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-card-bg: rgba(255, 255, 255, 0.03);
-  --glass-card-border: rgba(255, 255, 255, 0.08);
-  --input-bg: rgba(0, 0, 0, 0.3);
-  --input-border: rgba(255, 255, 255, 0.1);
-  --text-gradient-start: #ffffff;
-  --text-gradient-end: #94a3b8;
-  --tag-bg: rgba(255, 255, 255, 0.08);
-  --tag-text: #cbd5e1;
-  --icon-bg: rgba(255, 255, 255, 0.05);
-  --icon-border: rgba(255, 255, 255, 0.1);
-  --timeline-border: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(212, 175, 55, 0.05);
+  --glass-border: rgba(212, 175, 55, 0.2);
+  --glass-card-bg: rgba(10, 10, 10, 0.8);
+  --glass-card-border: rgba(212, 175, 55, 0.3);
+  --input-bg: rgba(255, 255, 255, 0.03);
+  --input-border: rgba(212, 175, 55, 0.2);
+  --text-gradient-start: #fde68a;
+  --text-gradient-end: #b45309;
+  --tag-bg: rgba(212, 175, 55, 0.1);
+  --tag-text: #fde68a;
+  --icon-bg: rgba(212, 175, 55, 0.05);
+  --icon-border: rgba(212, 175, 55, 0.3);
+  --timeline-border: rgba(212, 175, 55, 0.2);
+}
+
+/* Dark theme (same as root for consistency) */
+.dark {
+  --background: #000000;
+  --foreground: #f8fafc;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --glass-bg: rgba(212, 175, 55, 0.05);
+  --glass-border: rgba(212, 175, 55, 0.2);
+  --glass-card-bg: rgba(10, 10, 10, 0.8);
+  --glass-card-border: rgba(212, 175, 55, 0.3);
+  --input-bg: rgba(255, 255, 255, 0.03);
+  --input-border: rgba(212, 175, 55, 0.2);
+  --text-gradient-start: #fde68a;
+  --text-gradient-end: #b45309;
+  --tag-bg: rgba(212, 175, 55, 0.1);
+  --tag-text: #fde68a;
+  --icon-bg: rgba(212, 175, 55, 0.05);
+  --icon-border: rgba(212, 175, 55, 0.3);
+  --timeline-border: rgba(212, 175, 55, 0.2);
 }
 
 html {

@@ -31,12 +31,12 @@ export const CustomCursor = () => {
 
     return (
         <motion.div
-            className="fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-neon-cyan pointer-events-none z-50 mix-blend-difference"
+            className="fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-gold-premium pointer-events-none z-50 mix-blend-difference"
             animate={{
                 x: mousePosition.x - 16,
                 y: mousePosition.y - 16,
                 scale: isHovering ? 1.5 : 1,
-                backgroundColor: isHovering ? "rgba(0, 240, 255, 0.2)" : "transparent",
+                backgroundColor: isHovering ? "rgba(212, 175, 55, 0.2)" : "transparent",
             }}
             transition={{ type: "spring", stiffness: 500, damping: 28 }}
         />

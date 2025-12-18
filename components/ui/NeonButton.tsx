@@ -15,8 +15,8 @@ export const NeonButton = ({
     ...props
 }: NeonButtonProps) => {
     const variants = {
-        primary: "border-neon-purple text-neon-purple hover:bg-neon-purple/10 hover:shadow-[0_0_20px_rgba(176,38,255,0.4)]",
-        secondary: "border-neon-cyan text-neon-cyan hover:bg-neon-cyan/10 hover:shadow-[0_0_20px_rgba(0,240,255,0.4)]",
+        primary: "bg-gold-premium text-black border-gold-premium hover:bg-gold-light hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]",
+        secondary: "border-gold-premium text-gold-premium hover:bg-gold-premium/10 hover:shadow-[0_0_20px_rgba(212,175,55,0.2)]",
     };
 
     return (
