@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { NeonButton } from "@/components/ui/NeonButton";
-import { Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Linkedin, Twitter } from "lucide-react";
 
 export const Contact = () => {
     return (
@@ -45,8 +45,8 @@ export const Contact = () => {
                                 </a>
 
                                 <div className="flex gap-4 pt-4">
-                                    <a href="https://github.com/Rafael22222222" target="_blank" rel="noopener noreferrer" className="icon-container p-3 rounded-full">
-                                        <Github className="w-5 h-5" />
+                                    <a href="mailto:raphaeligbo554@gmail.com" className="icon-container p-3 rounded-full">
+                                        <Mail className="w-5 h-5" />
                                     </a>
                                     <a href="https://linkedin.com/in/rafael-igbo" target="_blank" rel="noopener noreferrer" className="icon-container p-3 rounded-full">
                                         <Linkedin className="w-5 h-5" />

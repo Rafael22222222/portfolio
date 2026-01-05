@@ -6,8 +6,8 @@ import { GlassCard } from "@/components/ui/GlassCard";
 const experiences = [
     {
         id: 1,
-        role: "Full-Stack Developer",
-        company: "Limitless Studio",
+        role: "Full-Stack Developer & Digital Artist",
+        company: "Healthcode, Limitless Studio",
         period: "2024 - Present",
         description: "Leading the frontend team in building scalable web applications using Next.js and React.",
     },
